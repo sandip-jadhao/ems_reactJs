@@ -5,7 +5,6 @@ const Login = () => {
     const [pass,setPass]= useState("");
     const handleSubmit = (e)=>{
          e.preventDefault();
-        
     }
   return (
     <div className="flex h-screen w-screen justify-center items-center bg-black">
@@ -13,6 +12,10 @@ const Login = () => {
         <form 
         onSubmit={(e)=>{
             handleSubmit(e); 
+            console.log("Email:",email);
+            console.log("Password:",pass);
+            setEmail("");
+            setPass("");
         }}
         className="flex flex-col items-center justify-center gap-6"
         >
